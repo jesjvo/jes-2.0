@@ -5,8 +5,16 @@
 }
 
 .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 48; --> /* !text-* */
+    font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 48;
     @apply pointer-events-none select-none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.txt-grd {
+    @apply bg-gradient-to-r text-transparent bg-clip-text;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,14 +29,23 @@ p {
     @apply block
 }
 
-.sct-wlg {
-    @apply mx-auto w-full max-w-7xl;
+.sct-wlg {@apply mx-auto w-full max-w-7xl; }
+.sct-wmd { @apply block max-w-5xl mx-auto; }
+
+.sct-col {
+    @apply flex flex-col;
+}
+.sct-row {
+    @apply flex flex-row;
 }
 
-.sct-colss {
-    @apply flex flex-col items-start text-start;
+.sct-grid {
+    @apply grid w-full;
 }
 
-.sct-colcs {
-    @apply flex flex-col items-center text-start;
+/* mask --> [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_100%)] <-- */
+
+.bg-grid {
+    @apply absolute inset-0 pointer-events-none; background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    /* --> bg-[length:var_var] dark:invert <-- */
 }
