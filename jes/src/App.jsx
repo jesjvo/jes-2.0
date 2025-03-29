@@ -14,7 +14,6 @@ function App() {
                     <span className={`material-symbols-outlined`}>
                         deployed_code
                     </span>
-
                 </div>
             </div>
         </div>
